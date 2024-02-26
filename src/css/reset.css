@@ -8,11 +8,11 @@ h6,
 p {
   margin: 0;
 }
-list {
+.list {
   list-style: none;
 }
 
-link {
+.link {
   text-decoration: none;
 }
 p:last-child {
