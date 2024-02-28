@@ -5,10 +5,6 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 /* import Error_png from '../img/Error_png' */
 
-
-
-
-
 const buttonEl = document.querySelector('button[data-start]');
 const inputEl = document.getElementById('datetime-picker');
 const days = document.querySelector('span[data-days]');
