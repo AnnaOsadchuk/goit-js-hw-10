@@ -24,33 +24,32 @@ function onFormSubmit(event) {
 
   const promise = createPromise(state, delay);
 
-  promise({ delay })
-    .then(delay =>
+  promise
+    .then(message =>
       iziToast.show({
         title: 'OK',
+        icon: '/img/icons.svg',
+        message: `${message}`,
         titleColor: '#FFFFFF',
         titleSize: '16px',
         messageSize: '16px',
         messageColor: '#FFFFFF',
         backgroundColor: '#59A10D',
-        message: 'Fulfilled promise in ${delay}ms',
         position: 'topRight',
-        timeout: '${delay}',
-        close: true,
+        timeout: 3000,
       })
     )
-    .catch(delay =>
+    .catch(message =>
       iziToast.show({
         title: 'Error',
         titleColor: '#FFFFFF',
         titleSize: '16px',
         messageSize: '16px',
         messageColor: '#FFFFFF',
-        backgroundColor: '#59A10D',
-        message: 'Rejected promise in ${delay}ms',
+        backgroundColor: '#B51B1B',
+        message: `${message}`,
         position: 'topRight',
-        timeout: '${ delay }',
-        close: true,
+        timeout: 3000,
       })
     );
 }
