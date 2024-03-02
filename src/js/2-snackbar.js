@@ -17,7 +17,6 @@ function onFormSubmit(event) {
 
   stateEls.forEach(stateEl => {
     if (stateEl.checked) {
-      console.log(stateEl.value);
       state = stateEl.value;
     }
   });
