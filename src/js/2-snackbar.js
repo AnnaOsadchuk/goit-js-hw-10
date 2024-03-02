@@ -1,5 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import Error_png from '../img/error.png';
+import OK_png from '../img/ok.png';
 
 const formEl = document.querySelector('.form');
 const delayEl = document.querySelector('form input[name="delay"]');
@@ -35,6 +37,7 @@ function onFormSubmit(event) {
         backgroundColor: '#59A10D',
         position: 'topRight',
         timeout: 3000,
+        iconUrl: OK_png,
       })
     )
     .catch(message =>
@@ -48,6 +51,7 @@ function onFormSubmit(event) {
         message: `${message}`,
         position: 'topRight',
         timeout: 3000,
+        iconUrl: Error_png,
       })
     );
 }
